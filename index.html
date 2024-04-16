@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Icons/F-3-3-2024.png" type="image/x-icon">
+
+  <title>FSMaker</title>
+  <style>
+    * {
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .landing-page {
+      position: relative;
+      background-color: #0d0d0d;
+      /* Color de fondo oscuro */
+      color: #ffffff;
+      /* Color de texto */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    .center-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .download-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff6600;
+      /* Color del botón de descarga */
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 20px;
+    }
+
+    .credits {
+      color: #888888;
+    }
+
+    /* Estilos para el cuadro en wireframe 3D */
+    .wireframe-box {
+      width: 800px;
+      height: 800px;
+      border: 2px solid linear-gradient(135deg, orange, purple);
+      border-radius: 10px;
+      border-style: dashed;
+      animation: rotateBox 5s linear infinite;
+      position: absolute;
+      z-index: 1;
+    }
+
+    @keyframes rotateBox {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+
+      100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="landing-page">
+    <div class="content">
+      <img style="max-width: 70%;" src="Icons/FSMachine-3-3-2024.png" alt="Imagen representativa" class="center-image">
+      <a href="FSMaker_V1_Free.unitypackage" class="download-button">Descargar</a>
+    </div>
+    <div class="wireframe-box"></div>
+    <footer>
+      <img style="max-width: 20%;" src="Icons/POWERED-BY-ULTRAHSTUDIOS-4-3-2024.png" alt="Imagen representativa"
+        class="center-image">
+    </footer>
+  </div>
+</body>
+
+</html>
