@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso - Documentación de FSMaker</title>
+    <style>
+        /* Estilos para el menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Uso</h2>
+    <p>Pasa el mouse sobre el siguiente menú para ver las opciones:</p>
+
+    <div class="dropdown">
+        <span class="dropdown-btn">Opciones de Uso</span>
+        <div class="dropdown-content">
+            <a href="#" onclick="loadUsage('crear-componentes.html')">Crear componentes</a>
+            <a href="#" onclick="loadUsage('gestionar-eventos.html')">Gestionar eventos</a>
+            <a href="#" onclick="loadUsage('integracion-con-unity.html')">Integración con Unity</a>
+        </div>
+    </div>
+
+    <div id="usage-content">
+        <!-- Contenido cargado dinámicamente se mostrará aquí -->
+    </div>
+
+    <script>
+        function loadUsage(option) {
+            fetch(option)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('usage-content').innerHTML = html;
+                })
+                .catch(error => console.error('Error al cargar la página:', error));
+        }
+    </script>
+</body>
+
+</html>
